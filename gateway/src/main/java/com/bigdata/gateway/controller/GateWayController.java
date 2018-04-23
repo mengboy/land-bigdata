@@ -23,7 +23,6 @@ public class GateWayController {
         if (serviceName == null){
             return R.error("服务未启动");
         }
-        StringBuilder url = new StringBuilder("http://").append(serviceName).append(request);
-        return webService.getRequestWebService(url.toString());
+        return webService.getRequestWebService("http://" + serviceName + request);
     }
 }
